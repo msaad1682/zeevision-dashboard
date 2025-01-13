@@ -1,0 +1,23 @@
+/* Home.css */
+.container {
+    display: flex; /* Enables Flexbox layout */
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .sidebar {
+    flex: 0 0 250px; /* Sidebar takes up a fixed width */
+    background-color: #f4f4f4; /* Optional: Background for Sidebar */
+    height: 100%; /* Sidebar should occupy the full height of the container */
+  }
+  
+  .small-sidebar {
+    flex: 0 0 80px; /* Adjust for small Sidebar when collapsed */
+  }
+  
+  .large-container {
+    flex: 1; /* Feed occupies the remaining space */
+    padding: 20px; /* Add some padding around Feed content */
+    overflow-y: auto; /* Optional: Scroll if content overflows */
+    background-color: #fff; /* Optional: Background for Feed area */
+  }
+  

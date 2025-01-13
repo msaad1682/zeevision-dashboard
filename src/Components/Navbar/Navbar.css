@@ -1,0 +1,31 @@
+nav{
+    top: 0;
+    padding: 10px 3%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px;
+    position: sticky;
+    z-index: 10;
+    background: #fff;
+    width: 82vw;
+}
+
+.nav-left .menu-icon{
+    width: 22px;
+    margin-right: 25px;
+}
+
+.nav-right img{
+    margin-right: 25px;
+    width: 25px;
+}
+
+.nav-right .user-icon{
+    border-radius: 50%;
+    width: 35px;
+}
+.large-nav{
+    width: 94vw;
+}
+
+
+  
