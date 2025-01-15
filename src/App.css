@@ -1,6 +1,5 @@
 .app {
   display: flex;
-  /* height: 100vh; */
 }
 
 /* Sidebar Styles */
@@ -9,7 +8,7 @@
 }
 
 .sidebar-collapsed .sidebar {
-  width: 80px; /* Collapsed sidebar width */
+  width: 78px; /* Collapsed sidebar width */
   transition: width 0.3s ease;
 
 }
@@ -41,9 +40,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 0;
-  /* padding: 1rem; */
   background-color: #f7f9fc; /* Light background */
-  /* overflow-y: auto; Scroll only vertically */
 }
 
 /* Charts row */
@@ -56,7 +53,6 @@
 
 .charts-row > * {
   flex: 1;
-  /* max-width: 45%;  */
   background: #fff; /* Card background */
   padding: 1rem;
   border-radius: 8px; /* Smooth edges */
@@ -74,7 +70,6 @@
 }
 
 @media (max-width: 768px) {
-  /* Responsive charts row */
   .charts-row {
     flex-direction: column;
   }

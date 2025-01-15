@@ -6,12 +6,16 @@ nav{
     position: sticky;
     z-index: 10;
     background: #fff;
-    width: 82vw;
+    width: 81vw;
 }
 
-.nav-left .menu-icon{
+.nav-left .menu{
     width: 22px;
     margin-right: 25px;
+}
+
+.logo-icon{
+    cursor: pointer;
 }
 
 .nav-right img{

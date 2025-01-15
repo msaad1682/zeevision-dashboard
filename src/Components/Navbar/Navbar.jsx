@@ -1,20 +1,20 @@
 import React from 'react';
 import './Navbar.css';
-import menu_icon from '../../assets/menu.png';
 import profile_icon from '../../assets/saad.jpeg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({ setSidebar, sidebar }) => {
   return (
     <nav className={`flex-div ${sidebar ? "" : "large-nav"}`}>
-      <img
-        className="menu-icon"
+      <div
+        className="menu"
         onClick={() => {
-          setSidebar(prev => !prev);
-        //   alert('Menu icon clicked! Sidebar toggled.');
+          setSidebar((prev) => !prev);
         }}
-        src={menu_icon}
-        alt="Toggle Sidebar"
-      />
+      >
+        <FontAwesomeIcon icon={faBars} className="logo-icon" />
+      </div>
       <div className="nav-right flex-div">
         <img className="user-icon" src={profile_icon} alt="Profile Icon" />
       </div>
