@@ -31,7 +31,7 @@ function List() {
   };
 
   return (
-    <div className="container table-responsive">
+    <div className="container table-responsive " style={{height:"100vh"}}>
       <h1>User Data Table</h1>
       <table className="table table-bordered">
         <thead>

@@ -28,9 +28,11 @@ const Sidebar = ({ sidebar }) => {
       <div className="sidebar-text">
         <h3 className="side-txt">General</h3>
         <div className="links" onClick={() => toggleMenu('home')}>
+          <Link to='/'>
           <FontAwesomeIcon icon={faHouse} className="icon" />
-          <Link to='/' className="shortcut-name">Home</Link>
-          {/* <FontAwesomeIcon icon={menuStates['home'] ? faChevronUp : faChevronDown} className="chevron-icon" /> */}
+          <span className="shortcut-name">Home</span>
+          </Link>
+          
         </div>
         {/* {menuStates['home'] && (
           <div className="sub-menu">
@@ -58,7 +60,7 @@ const Sidebar = ({ sidebar }) => {
         </div>
         {menuStates['tables'] && (
           <div className="sub-menu">
-            <Link to="/List" className="sub-menu-item">List</Link>           
+            <Link to="/List" className="sub-menu-item shortcut-name">List</Link>           
           </div>
         )}
         <div className="links" onClick={() => toggleMenu('layouts')}>
@@ -69,10 +71,10 @@ const Sidebar = ({ sidebar }) => {
         {menuStates['layouts'] && (
           <div className="sub-menu">
             {/* Link to the new page */}
-            <Link to="/Layout" className="sub-menu-item">
+            <Link to="/Layout" className="sub-menu-item shortcut-name">
               Add User
             </Link>
-            <Link to="/Role" className="sub-menu-item">
+            <Link to="/Role" className="sub-menu-item shortcut-name">
               Add User Role
             </Link>
           </div>
