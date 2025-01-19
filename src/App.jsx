@@ -11,6 +11,7 @@ import DoughNutChart from './Components/charts/DoughNutChart/DoughNutChart';
 import Layout from './Pages/Layout/Layout';
 import Role from './Pages/Role/Role';
 import List from './Pages/List/List';
+import Report from './Pages/Report/Report';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
             <Route path="/Layout" element={<Layout />} />
             <Route path="/Role" element={<Role />} />
             <Route path="/List" element={<List />} />
+            <Route path="/Report" element={<Report />}/>
           </Routes>
         </div>
       </div>

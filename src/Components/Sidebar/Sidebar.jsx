@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Sidebar.css';
 import profile_icon from '../../assets/saad.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faPen, faDesktop, faTable, faChartArea, faCopy, faPaw, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faEdit, faTable, faCopy, faPaw, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 const Sidebar = ({ sidebar }) => {
   const [menuStates, setMenuStates] = useState({});
@@ -32,27 +32,13 @@ const Sidebar = ({ sidebar }) => {
           <FontAwesomeIcon icon={faHouse} className="icon" />
           <span className="shortcut-name">Home</span>
           </Link>
-          
         </div>
-        {/* {menuStates['home'] && (
-          <div className="sub-menu">
-            <div className="sub-menu-item">Dashboard 1</div>
-            <div className="sub-menu-item">Dashboard 2</div>
-            <div className="sub-menu-item">Dashboard 3</div>
-          </div>
-        )} */}
-        {/* <div className="links" onClick={() => toggleMenu('forms')}>
-          <FontAwesomeIcon icon={faPen} className="icon" />
-          <span className="shortcut-name">Forms</span>
-          <FontAwesomeIcon icon={menuStates['forms'] ? faChevronUp : faChevronDown} className="chevron-icon" />
+        <div className="links" onClick={() => toggleMenu('report')}>
+          <Link to='Report/'>
+          <FontAwesomeIcon icon={faEdit} className="icon" />
+          <span className="shortcut-name">Report</span>
+          </Link>
         </div>
-        {menuStates['forms'] && (
-          <div className="sub-menu">
-            <div className="sub-menu-item">General Form</div>
-            <div className="sub-menu-item">Form Validation</div>
-            <div className="sub-menu-item">Form Button</div>
-          </div>
-        )} */}
          <div className="links" onClick={() => toggleMenu('tables')}>
           <FontAwesomeIcon icon={faTable} className="icon" />
           <span className="shortcut-name">Tables</span>
