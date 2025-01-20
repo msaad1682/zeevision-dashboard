@@ -1,40 +1,65 @@
 import React, { useState } from "react";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
 import "./Report.css"; // Add your custom styles here
 
 const Report = () => {
   const [data, setData] = useState([
-    { date: "2025-01-01", client: "Client A", calls: 10, sales: 5 },
-    { date: "2025-01-02", client: "Client B", calls: 12, sales: 7 },
-    { date: "2025-01-03", client: "Client C", calls: 8, sales: 3 },
+    { date: "2025-01-01", client: "M.Saad", calls: 100, sales: 50 },
+    { date: "2025-01-02", client: "Fahad", calls: 12, sales: 7 },
+    { date: "2025-01-03", client: "Usama", calls: 8, sales: 3 },
   ]);
 
-  const handleDownload = () => {
-    // Convert table data to CSV format
+  const handleDownloadCSV = () => {
     const headers = ["Date", "Client Name", "Calls Made", "Sales Closed"];
     const csvContent = [
       headers.join(","), // Add headers as the first row
       ...data.map((row) => `${row.date},${row.client},${row.calls},${row.sales}`), // Map each row to a CSV line
     ].join("\n");
 
-    // Create a Blob from the CSV content
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-
-    // Create a downloadable link
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "sales-report.csv"; // File name for the downloaded file
+    link.download = "sales-report.csv";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
+  const handleDownloadPDF = () => {
+    const doc = new jsPDF();
+
+    // Title
+    doc.setFontSize(18);
+    doc.text("Weekly Sales Call Report", 14, 20);
+
+    // Table headers and data
+    const tableColumn = ["Date", "Client Name", "Calls Made", "Sales Closed"];
+    const tableRows = data.map((row) => [row.date, row.client, row.calls, row.sales]);
+
+    // Add the table to the PDF
+    doc.autoTable({
+      startY: 30,
+      head: [tableColumn],
+      body: tableRows,
+    });
+
+    // Save the PDF
+    doc.save("sales-report.pdf");
+  };
+
   return (
     <div className="report-container">
       <h1 className="mt-4">Weekly Sales Call Report</h1>
-      <button onClick={handleDownload} style={{ marginTop: "20px" }}>
-        Download Report as CSV
-      </button>
+      <div style={{ marginTop: "20px" }}>
+        <button className=" download" onClick={handleDownloadCSV} style={{ marginRight: "10px" }}>
+          Download Report as CSV
+        </button>
+        <button className="download-pdf" onClick={handleDownloadPDF}>
+          Download Report as PDF
+        </button>
+      </div>
       <table className="report-table">
         <thead>
           <tr>

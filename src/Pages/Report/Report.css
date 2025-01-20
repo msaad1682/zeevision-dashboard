@@ -26,3 +26,27 @@
   .content{
     height: 100vh;
   }
+
+  .download{
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+  }
+  .download:hover{
+    color: white;
+    background-color: #34495E;
+  }
+
+  .download-pdf{
+    background-color: #34495E;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    color: aliceblue;
+  }
+
+.download-pdf:hover{
+    color: rgb(235, 0, 0);
+    background-color: #080707;
+  }
