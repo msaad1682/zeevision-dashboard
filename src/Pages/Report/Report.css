@@ -3,7 +3,7 @@
     /* margin: auto; */
     text-align: center;
     font-family: Arial, sans-serif;
-    /* height: 100%; */
+    /* height: 100vh; */
   }
   
   .report-table {
@@ -23,9 +23,9 @@
     font-weight: bold;
   }
   
-  .content{
+  /* .content{
     height: 100vh;
-  }
+  } */
 
   .download{
     background-color: red;
@@ -48,5 +48,6 @@
 
 .download-pdf:hover{
     color: rgb(235, 0, 0);
-    background-color: #080707;
+    background-color: #c0b1b1;
   }
+ 

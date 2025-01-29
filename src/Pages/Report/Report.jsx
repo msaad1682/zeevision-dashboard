@@ -50,7 +50,7 @@ const Report = () => {
   };
 
   return (
-    <div className="report-container">
+    <div className="report-container h-auto">
       <h1 className="mt-4">Weekly Sales Call Report</h1>
       <div style={{ marginTop: "20px" }}>
         <button className=" download" onClick={handleDownloadCSV} style={{ marginRight: "10px" }}>
